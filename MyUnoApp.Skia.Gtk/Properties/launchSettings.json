@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "MyUnoApp.Skia.Gtk": {
+      "commandName": "Project",
+      "remoteDebugEnabled": false
+    },
+    "WSL 2": {
+      "commandName": "WSL2",
+      "distributionName": "Ubuntu-20.04",
+      "environmentVariables": {
+        "DISPLAY": "192.168.1.82:0"
+      }
+    }
+  }
+}

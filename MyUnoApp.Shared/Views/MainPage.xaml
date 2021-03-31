@@ -1,0 +1,35 @@
+<Page
+    x:Class="MyUnoApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyUnoApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:rp="clr-namespace:Reactive.Bindings.Interactivity;assembly=ReactiveProperty.WPF"
+    xmlns:vm="using:MyUnoApp.ViewModels"
+    mc:Ignorable="d" >
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Margin="20,20">
+            <Button
+                Command="{x:Bind Model.MoveMotorCommand}" 
+                CommandParameter="{Binding Value,ElementName=slider}"
+                Content="Move Motor" FontSize="36"/>
+            <StackPanel Orientation="Horizontal" Margin="20,20">
+                <Slider x:Name="slider" 
+                        Orientation="Vertical"
+                        Maximum="100" 
+                        Height="250"/>
+                <TextBlock Text="{Binding Value,ElementName=slider}"/>
+                <Slider Value="{x:Bind Model.Output.Value.Centimeters, Mode=OneWay}" 
+                        IsEnabled="False"
+                        Orientation="Vertical"
+                        Maximum="100" 
+                        Height="250"
+                        AllowFocusOnInteraction="False" 
+                        CanDrag="False"/>
+                <TextBlock Text="{x:Bind Model.Output.Value, Mode=OneWay}"/>
+            </StackPanel>
+        </StackPanel>		
+    </Grid>
+</Page>
