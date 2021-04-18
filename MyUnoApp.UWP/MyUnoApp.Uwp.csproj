@@ -37,8 +37,8 @@
     <AssemblyName>MyUnoApp</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion>10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <SynthesizeLinkMetadata>true</SynthesizeLinkMetadata>
     <FileAlignment>512</FileAlignment>
