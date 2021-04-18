@@ -14,6 +14,8 @@ namespace MyUnoApp.Models
 
     class MotorModel : IMotorModel
     {
+        private const double StepSize = 1.0;
+        
         readonly ReactiveProperty<bool> _busy;
         readonly ReactiveProperty<Length> _position;
 
@@ -29,19 +31,19 @@ namespace MyUnoApp.Models
 
         public async Task MoveAsync(Length position)
         {
-            if ( _busy.Value ) 
+            if (_busy.Value || _position.Value == position) 
                 return;
 
-            _busy.Value = true;
-            
+            _busy.Value = true;            
             try
             {
+
                 if (_position.Value < position)
                 {
                     while (_position.Value <= position)
                     {
                         await Task.Delay(3);
-                        _position.Value += Length.FromMillimeters(1);
+                        _position.Value += Length.FromMillimeters(StepSize);
                     }
                 }
                 else
@@ -49,7 +51,7 @@ namespace MyUnoApp.Models
                     while (_position.Value >= position)
                     {
                         await Task.Delay(3);
-                        _position.Value += Length.FromMillimeters(-1);
+                        _position.Value += Length.FromMillimeters(-StepSize);
                     }
                 }
             }
