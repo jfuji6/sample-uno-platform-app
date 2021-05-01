@@ -28,7 +28,7 @@
                         Height="250"
                         AllowFocusOnInteraction="False" 
                         CanDrag="False"/>
-                <TextBlock Text="{x:Bind Model.Output.Value, Mode=OneWay}"/>
+                <TextBlock Text="{x:Bind Model.Output.Value, Mode=OneWay}"/>               
             </StackPanel>
         </StackPanel>		
     </Grid>
