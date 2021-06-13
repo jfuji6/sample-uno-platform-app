@@ -22,8 +22,8 @@
     <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="2.80.2" />
     <PackageReference Include="System.Reactive.Core" Version="5.0.0" />
     <PackageReference Include="UnitsNet" Version="4.89.0" />
-    <PackageReference Include="Uno.UI.Skia.Gtk" Version="3.6.6" />
-    <PackageReference Include="Uno.UI.RemoteControl" Version="3.6.6" Condition="'$(Configuration)'=='Debug'" />
+    <PackageReference Include="Uno.UI.Skia.Gtk" Version="3.8.6" />
+    <PackageReference Include="Uno.UI.RemoteControl" Version="3.8.6" Condition="'$(Configuration)'=='Debug'" />
   </ItemGroup>
   <Import Project="..\MyUnoApp.Shared\MyUnoApp.Shared.projitems" Label="Shared" />
 </Project>
